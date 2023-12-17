@@ -39,8 +39,10 @@ export default async function Account() {
 
     const newName = formData.get('name') as string;
     const supabase = createServerActionClient<Database>({ cookies });
-    const session = await getSession();
-    const user = session?.user;
+    // const session = await getSession();
+    const {
+      data: { user }
+    } = await supabase.auth.getUser();
     const { error } = await supabase
       .from('users')
       .update({ full_name: newName })
