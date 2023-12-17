@@ -11,7 +11,7 @@ interface FoodItemProps {
 }
 
 export const FoodItem: React.FC<FoodItemProps> = ({ name, price, description, image_url, ingredients }) => {
-  const onImageError = (e) => {
+  const onImageError = (e:any) => {
     e.target.src = 'https://media.istockphoto.com/id/1316145932/photo/table-top-view-of-spicy-food.jpg?s=612x612&w=0&k=20&c=eaKRSIAoRGHMibSfahMyQS6iFADyVy1pnPdy1O5rZ98='
   }
   return (

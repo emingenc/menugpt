@@ -1,5 +1,5 @@
 //import image  next/image
-import { Image } from 'next/image';
+import  Image  from 'next/image';
 
 const Logo = ({ className = '', ...props }) => (
   <svg
@@ -11,6 +11,7 @@ const Logo = ({ className = '', ...props }) => (
     className={className}
     {...props}
   >
+    <Image src="/logo.png" alt="logo" width="32" height="32" />
    
   </svg>
 );

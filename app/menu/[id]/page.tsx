@@ -24,6 +24,21 @@ async function getFoods( id: string ) {
 }
 
 
+interface Food {
+  id: string,
+  name: string,
+  price: string,
+  image_url: string,
+  description: string,
+  ingredients: string,
+  category: string
+}
+
+interface Category {
+  [key: string]: Food[]
+}
+
+
 
 export default async function MenuPage({ params }: { params: { id: string } }) {
 
@@ -64,7 +79,7 @@ export default async function MenuPage({ params }: { params: { id: string } }) {
             <AccordionTrigger defaultChecked={index === 0} >{category}</AccordionTrigger>
               <AccordionContent>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {categories[category].map((food) => (
+                  {categories[category].map((food:Food) => (
                     <FoodItem
                       key={food.id}
                       name={food.name}

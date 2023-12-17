@@ -15,6 +15,20 @@ import {
 import { FoodItem } from '@/components/FoodItem';
 import QRCode from "react-qr-code";
 
+interface Food {
+  id: string,
+  name: string,
+  price: string,
+  image_url: string,
+  description: string,
+  ingredients: string,
+  category: string
+}
+
+interface Category {
+  [key: string]: Food[]
+}
+
 
 export default async function DashboardPage() {
   const supabase = createServerSupabaseClient();
@@ -36,7 +50,7 @@ export default async function DashboardPage() {
   .eq('user_id', user?.id);
    
   // categories hash map with category name key foods array value
-  const categories = foods?.reduce((acc, food) => {
+  const categories: Category   = foods?.reduce((acc: Category, food: Food) => {
     if (!acc[food.category]) {
       acc[food.category] = [];
     }
@@ -66,15 +80,18 @@ export default async function DashboardPage() {
             <AccordionTrigger  >{category}</AccordionTrigger>
               <AccordionContent>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {categories[category].map((food) => (
+                {categories[category].map((food: Food) => (
+                    // if food is undefined return null
+                    food && 
                     <FoodItem
-                      key={food.id}
-                      name={food.name}
-                      price={food.price}
-                      image_url={food.image_url}
-                      description={food.description}
-                      ingredients={food.ingredients}
+                      key={food?.id}
+                      name={food?.name}
+                      price={food?.price}
+                      image_url={food?.image_url}
+                      description={food?.description}
+                      ingredients={food?.ingredients}
                     />
+                    
                   ))}
                 </div>
               </AccordionContent>
