@@ -44,7 +44,7 @@ export default function RootLayout({
 }: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className="loading dark bg-black">
+      <body className="loading dark bg-blue">
         <SupabaseProvider>
           <main
             id="skip"

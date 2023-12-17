@@ -28,7 +28,7 @@ export function SearchDialog() {
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault()
     console.log(query)
-    complete(query)
+    complete({query})
   }
 
   return (

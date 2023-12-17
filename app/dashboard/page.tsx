@@ -13,6 +13,7 @@ import {
   AccordionContent
 } from '@/components/ui/accordion';
 import { FoodItem } from '@/components/FoodItem';
+import QRCode from "react-qr-code";
 
 
 export default async function DashboardPage() {
@@ -43,10 +44,22 @@ export default async function DashboardPage() {
     return acc;
   }
   , {});
+  // NEXT_PUBLIC_SITE_URL
+  const url = process.env.NEXT_PUBLIC_SITE_URL
 
   
   return (
-   <div className="flex text-white flex-center justify-center space-y-4 mt-20 ml-40 mr-40">
+   <div className="flex flex-col text-white flex-center justify-center space-y-4 mt-20 ml-40 mr-40">
+
+      <div className="flex flex-col justify-center items-center text-white text-2xl font-bold mt-20  w-full">
+        <QRCode value={`${url}/menu/${user?.id}`} 
+        fgColor='orange'
+        size={300}
+        />
+        <p className="mt-4">Scan this QR code to view your menu</p>
+        <a href={`${url}/menu/${user?.id}`} className="mt-4">View your menu</a>
+      </div>
+
     <Accordion type="single" collapsible className="w-full">
         { categories && Object.keys(categories).map((category, index) => (
             <AccordionItem  value={category}>
