@@ -1,4 +1,5 @@
-import SupabaseProvider from './supabase-provider';
+// import Footer from '@/components/ui/Footer';
+import Navbar from '@/components/ui/Navbar';
 import { PropsWithChildren } from 'react';
 import 'styles/main.css';
 
@@ -37,23 +38,17 @@ export const metadata = {
   }
 };
 
-export default function RootLayout({
+export default function DashboardLayout({
   // Layouts must accept a children prop.
   // This will be populated with nested layouts or pages
   children
 }: PropsWithChildren) {
   return (
-    <html lang="en">
-      <body className="loading dark bg-black">
-        <SupabaseProvider>
-          <main
-            id="skip"
-            className="  min-h-[calc(100dvh-4rem)] md:min-h[calc(100dvh-5rem)]"
-          >
+    <>
+          <Navbar />
+         
             {children}
-          </main>
-        </SupabaseProvider>
-      </body>
-    </html>
+          {/* <Footer /> */}
+    </>
   );
 }

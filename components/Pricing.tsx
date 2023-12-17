@@ -1,6 +1,6 @@
 'use client';
 
-import Button from '@/components/ui/Button';
+import {Button} from '@/components/ui/button';
 import { Database } from '@/types_db';
 import { postData } from '@/utils/helpers';
 import { getStripe } from '@/utils/stripe-client';
@@ -130,7 +130,7 @@ export default function Pricing({
                   >
                     <div className="p-6">
                       <p>
-                        <span className="text-5xl font-extrabold white">
+                        <span className="text-5xl text-zinc-100 font-extrabold white">
                           {priceString}
                         </span>
                         <span className="text-base font-medium text-zinc-100">

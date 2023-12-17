@@ -24,14 +24,16 @@ export default async function Navbar() {
               <Logo />
             </Link>
             <nav className="hidden ml-6 space-x-2 lg:block">
-              <Link href="/" className={s.link}>
+              {/* {!user && (
+                <Link href="/pricing" className={s.link}>
                 Pricing
               </Link>
+              )}
               {user && (
                 <Link href="/account" className={s.link}>
                   Account
                 </Link>
-              )}
+              )} */}
             </nav>
           </div>
           <div className="flex justify-end flex-1 space-x-8">

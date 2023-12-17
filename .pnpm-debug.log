@@ -1,0 +1,410 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "nextjs-subscription-payments",
+      "version": "0.0.0",
+      "license": "MIT",
+      "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "stripe:listen": "stripe listen --forward-to=localhost:3000/api/webhooks --project-name=saas-starter",
+        "generate-types": "npx supabase gen types typescript --project-id YOUR_PROJECT_ID --schema public > types_db.ts"
+      },
+      "dependencies": {
+        "@hookform/resolvers": "^3.3.2",
+        "@radix-ui/react-label": "^2.0.2",
+        "@radix-ui/react-slot": "^1.0.2",
+        "@stripe/stripe-js": "^1.53.0",
+        "@supabase/auth-helpers-nextjs": "^0.7.0",
+        "@supabase/auth-ui-react": "^0.4.2",
+        "@supabase/auth-ui-shared": "^0.1.6",
+        "@supabase/supabase-js": "^2.23.0",
+        "ai": "^2.2.29",
+        "class-variance-authority": "^0.7.0",
+        "classnames": "^2.3.2",
+        "clsx": "^2.0.0",
+        "common-tags": "^1.8.2",
+        "gpt3-tokenizer": "^1.1.5",
+        "lucide-react": "^0.298.0",
+        "next": "13.4.3",
+        "openai-edge": "^1.2.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-hook-form": "^7.49.2",
+        "react-merge-refs": "^2.0.2",
+        "stripe": "^12.6.0",
+        "tailwind-merge": "^2.1.0",
+        "tailwindcss": "^3.3.2",
+        "tailwindcss-animate": "^1.0.7",
+        "zod": "^3.22.4"
+      },
+      "devDependencies": {
+        "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
+        "@types/node": "^20.2.3",
+        "@types/react": "^18.2.7",
+        "autoprefixer": "^10.4.14",
+        "eslint": "^8.41.0",
+        "eslint-config-next": "13.4.3",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-tailwindcss": "^3.12.0",
+        "postcss": "^8.4.23",
+        "prettier": "^2.8.8",
+        "prettier-plugin-tailwindcss": "^0.3.0",
+        "supabase": "^1.63.1",
+        "typescript": "^5.0.4"
+      },
+      "prettier": {
+        "arrowParens": "always",
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "none"
+      }
+    },
+    "prefix": "/Users/emingenc/Desktop/aec2023/menugpt"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/Users/emingenc/Library/pnpm/store/v3",
+    "virtualStoreDir": "/Users/emingenc/Desktop/aec2023/menugpt/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/Users/emingenc/Desktop/aec2023/menugpt",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@ianvs/prettier-plugin-sort-imports/3.7.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@ianvs/prettier-plugin-sort-imports",
+      "rawSpec": "^3.7.2"
+    }
+  },
+  "5 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/node/20.10.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/node",
+      "rawSpec": "^20.2.3"
+    }
+  },
+  "6 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/react/18.2.45",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@types/react",
+      "rawSpec": "^18.2.7"
+    }
+  },
+  "7 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/autoprefixer/10.4.16",
+    "wanted": {
+      "dependentId": ".",
+      "name": "autoprefixer",
+      "rawSpec": "^10.4.14"
+    }
+  },
+  "8 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint/8.56.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint",
+      "rawSpec": "^8.41.0"
+    }
+  },
+  "9 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-config-next/13.4.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint-config-next",
+      "rawSpec": "13.4.3"
+    }
+  },
+  "10 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-config-prettier/8.10.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint-config-prettier",
+      "rawSpec": "^8.8.0"
+    }
+  },
+  "11 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-plugin-react/7.33.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint-plugin-react",
+      "rawSpec": "^7.32.2"
+    }
+  },
+  "12 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-plugin-tailwindcss/3.13.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint-plugin-tailwindcss",
+      "rawSpec": "^3.12.0"
+    }
+  },
+  "13 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss/8.4.32",
+    "wanted": {
+      "dependentId": ".",
+      "name": "postcss",
+      "rawSpec": "^8.4.23"
+    }
+  },
+  "14 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/prettier/2.8.8",
+    "wanted": {
+      "dependentId": ".",
+      "name": "prettier",
+      "rawSpec": "^2.8.8"
+    }
+  },
+  "15 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/prettier-plugin-tailwindcss/0.3.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "prettier-plugin-tailwindcss",
+      "rawSpec": "^0.3.0"
+    }
+  },
+  "16 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/supabase/1.123.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "supabase",
+      "rawSpec": "^1.63.1"
+    }
+  },
+  "17 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/typescript/5.3.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "typescript",
+      "rawSpec": "^5.0.4"
+    }
+  },
+  "18 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@hookform/resolvers/3.3.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@hookform/resolvers",
+      "rawSpec": "^3.3.2"
+    }
+  },
+  "19 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@radix-ui/react-label/2.0.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@radix-ui/react-label",
+      "rawSpec": "^2.0.2"
+    }
+  },
+  "20 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@radix-ui/react-slot/1.0.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@radix-ui/react-slot",
+      "rawSpec": "^1.0.2"
+    }
+  },
+  "21 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@stripe/stripe-js/1.54.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@stripe/stripe-js",
+      "rawSpec": "^1.53.0"
+    }
+  },
+  "22 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@supabase/auth-helpers-nextjs/0.7.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@supabase/auth-helpers-nextjs",
+      "rawSpec": "^0.7.0"
+    }
+  },
+  "23 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@supabase/auth-ui-react/0.4.6",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@supabase/auth-ui-react",
+      "rawSpec": "^0.4.2"
+    }
+  },
+  "24 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@supabase/auth-ui-shared/0.1.8",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@supabase/auth-ui-shared",
+      "rawSpec": "^0.1.6"
+    }
+  },
+  "25 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@supabase/supabase-js/2.39.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@supabase/supabase-js",
+      "rawSpec": "^2.23.0"
+    }
+  },
+  "26 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ai/2.2.29",
+    "wanted": {
+      "dependentId": ".",
+      "name": "ai",
+      "rawSpec": "^2.2.29"
+    }
+  },
+  "27 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/class-variance-authority/0.7.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "class-variance-authority",
+      "rawSpec": "^0.7.0"
+    }
+  },
+  "28 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/classnames/2.3.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "classnames",
+      "rawSpec": "^2.3.2"
+    }
+  },
+  "29 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/clsx/2.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "clsx",
+      "rawSpec": "^2.0.0"
+    }
+  },
+  "30 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/common-tags/1.8.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "common-tags",
+      "rawSpec": "^1.8.2"
+    }
+  },
+  "31 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/gpt3-tokenizer/1.1.5",
+    "wanted": {
+      "dependentId": ".",
+      "name": "gpt3-tokenizer",
+      "rawSpec": "^1.1.5"
+    }
+  },
+  "32 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/lucide-react/0.298.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "lucide-react",
+      "rawSpec": "^0.298.0"
+    }
+  },
+  "33 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/next/13.4.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "next",
+      "rawSpec": "13.4.3"
+    }
+  },
+  "34 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/openai-edge/1.2.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "openai-edge",
+      "rawSpec": "^1.2.2"
+    }
+  },
+  "35 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react/18.2.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react",
+      "rawSpec": "^18.2.0"
+    }
+  },
+  "36 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-dom/18.2.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-dom",
+      "rawSpec": "^18.2.0"
+    }
+  },
+  "37 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-hook-form/7.49.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-hook-form",
+      "rawSpec": "^7.49.2"
+    }
+  },
+  "38 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-merge-refs/2.1.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-merge-refs",
+      "rawSpec": "^2.0.2"
+    }
+  },
+  "39 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/stripe/12.18.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "stripe",
+      "rawSpec": "^12.6.0"
+    }
+  },
+  "40 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tailwind-merge/2.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "tailwind-merge",
+      "rawSpec": "^2.1.0"
+    }
+  },
+  "41 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tailwindcss/3.3.6",
+    "wanted": {
+      "dependentId": ".",
+      "name": "tailwindcss",
+      "rawSpec": "^3.3.2"
+    }
+  },
+  "42 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tailwindcss-animate/1.0.7",
+    "wanted": {
+      "dependentId": ".",
+      "name": "tailwindcss-animate",
+      "rawSpec": "^1.0.7"
+    }
+  },
+  "43 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/zod/3.22.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "zod",
+      "rawSpec": "^3.22.4"
+    }
+  },
+  "44 error pnpm": {
+    "code": "ERR_PNPM_SPEC_NOT_SUPPORTED_BY_ANY_RESOLVER",
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "ai: isn't supported by any available resolver.",
+      "code": "ERR_PNPM_SPEC_NOT_SUPPORTED_BY_ANY_RESOLVER",
+      "stack": "pnpm: ai: isn't supported by any available resolver.\n    at Object.resolve (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:84665:17)\n    at async run (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:91126:23)"
+    }
+  }
+}
