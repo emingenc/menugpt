@@ -54,7 +54,7 @@ specifiers:
   zod: ^3.21.4
 
 dependencies:
-  '@hookform/resolvers': 3.3.2_react-hook-form@7.49.2
+  "@hookform/resolvers": "^3.3.1"
   '@radix-ui/react-accordion': 1.1.2_4lf4xofvn366h3sgouxfymsrw4
   '@radix-ui/react-dialog': 1.0.5_4lf4xofvn366h3sgouxfymsrw4
   '@radix-ui/react-label': 2.0.2_4lf4xofvn366h3sgouxfymsrw4
