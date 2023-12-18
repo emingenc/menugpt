@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@hookform/resolvers': ^3.3.2
+  '@hookform/resolvers': ^3.3.1
   '@ianvs/prettier-plugin-sort-imports': ^3.7.2
   '@radix-ui/react-accordion': ^1.1.2
   '@radix-ui/react-dialog': ^1.0.5
@@ -54,7 +54,7 @@ specifiers:
   zod: ^3.21.4
 
 dependencies:
-  "@hookform/resolvers": "^3.3.1"
+  '@hookform/resolvers': 3.3.2_react-hook-form@7.49.2
   '@radix-ui/react-accordion': 1.1.2_4lf4xofvn366h3sgouxfymsrw4
   '@radix-ui/react-dialog': 1.0.5_4lf4xofvn366h3sgouxfymsrw4
   '@radix-ui/react-label': 2.0.2_4lf4xofvn366h3sgouxfymsrw4
@@ -94,7 +94,7 @@ dependencies:
 
 devDependencies:
   '@ianvs/prettier-plugin-sort-imports': 3.7.2_prettier@2.8.8
-  '@types/node': 20.10.4
+  '@types/node': 20.10.5
   '@types/react': 18.2.45
   autoprefixer: 10.4.16_postcss@8.4.32
   eslint: 8.56.0
@@ -1292,8 +1292,8 @@ packages:
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
     dev: false
 
-  /@types/node/20.10.4:
-    resolution: {integrity: sha512-D08YG6rr8X90YB56tSIuBaddy/UXAA9RKJoFvrsnogAum/0pmjkgi4+2nx96A330FmioegBWmEYQ+syqCFaveg==}
+  /@types/node/20.10.5:
+    resolution: {integrity: sha512-nNPsNE65wjMxEKI93yOP+NPGGBJz/PoN3kZsVLee0XMiJolxSekEVD8wRwBUBqkwc7UWop0edW50yrCQW4CyRw==}
     dependencies:
       undici-types: 5.26.5
 
@@ -1328,7 +1328,7 @@ packages:
   /@types/websocket/1.0.10:
     resolution: {integrity: sha512-svjGZvPB7EzuYS94cI7a+qhwgGU1y89wUgjT6E2wVUfmAGIvRfT7obBvRtnhXCSsoMdlG4gBFGE7MfkIXZLoww==}
     dependencies:
-      '@types/node': 20.10.4
+      '@types/node': 20.10.5
     dev: false
 
   /@typescript-eslint/parser/5.62.0_xdgzedli73k7lw4xlyzszm74om:
@@ -4304,7 +4304,7 @@ packages:
     resolution: {integrity: sha512-cYjgBM2SY/dTm8Lr6eMyyONaHTZHA/QjHxFUIW5WH8FevSRIGAVtXEmBkUXF1fsqe7QvvRgQSGSJZmjDacegGg==}
     engines: {node: '>=12.*'}
     dependencies:
-      '@types/node': 20.10.4
+      '@types/node': 20.10.5
       qs: 6.11.2
     dev: false
 
