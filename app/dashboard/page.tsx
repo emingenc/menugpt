@@ -71,7 +71,7 @@ export default async function DashboardPage() {
         size={300}
         />
         <p className="mt-4">Scan this QR code to view your menu</p>
-        <a href={`${url}/menu/${user?.id}`} className="mt-4">View your menu</a>
+        <a href={`/menu/${user?.id}`} className="mt-4">View your menu</a>
       </div>
 
     <Accordion type="single" collapsible className="w-full">
